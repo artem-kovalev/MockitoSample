@@ -131,9 +131,14 @@ public class CartTest {
 	public void throwExceptionTest() {
 		CartItem cartItem = mock(CartItem.class);
 		when(cartItem.getProduct()).thenThrow(new RuntimeException());
-		
 		cartItem.getProduct();
 	}
 	
+	@Test(expected = RuntimeException.class)
+	public void throwExceptionTest2() {
+		Cart cart = mock(Cart.class);
+		doThrow(new RuntimeException()).when(cart).addProduct(any(Product.class), anyInt());
+		cart.addProduct(null, 0);
+	}
 	
 }
