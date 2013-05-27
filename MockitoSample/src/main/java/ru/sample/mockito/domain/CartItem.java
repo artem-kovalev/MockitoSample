@@ -3,11 +3,11 @@ package ru.sample.mockito.domain;
 /*
  * Одна позиция в чеке
  */
-class SaleItem {
+class CartItem {
 	private Product product;
 	private int amount;
 	
-	public SaleItem(Product product, int amount) {
+	public CartItem(Product product, int amount) {
 		if (product == null) {
 			throw new NullPointerException("Product not null");
 		}
