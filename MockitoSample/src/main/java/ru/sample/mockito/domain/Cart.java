@@ -32,7 +32,7 @@ public class Cart {
 		return count;
 	}
 	
-	public Collection<CartItem> getSaleItems() {
+	public Collection<CartItem> getCartItems() {
 		return Collections.unmodifiableCollection(cartItems);
 	}
 	

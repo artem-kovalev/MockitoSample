@@ -3,7 +3,7 @@ package ru.sample.mockito.domain;
 /*
  * Одна позиция в чеке
  */
-class CartItem {
+public class CartItem {
 	private Product product;
 	private int amount;
 	

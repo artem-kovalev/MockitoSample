@@ -51,13 +51,15 @@ public class CartTest {
 		assertEquals(expected, actual, 0.0001F);
 		
 		/*
-		 * atLeast(int) - минимальное количество вызовов
+		 * atLeast(int) - минимум количество вызовов
 		 * atLeastOnce() - вызван 1 раз
 		 * times(int) - вызвано ровное количество раз
 		 * atMost(int) - не более
 		 * never() - не разу не было вызвана
 		*/
 		verify(product, times(3)).getPrice();
+		verify(product, atLeast(3)).getPrice();
+		verify(product, atMost(3)).getPrice();
 	}
 	
 	@Test
