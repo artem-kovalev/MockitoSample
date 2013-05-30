@@ -61,15 +61,11 @@ public class ReportSenderImplTest {
 	}
 	
 	@Test
-	public void sendReportTestGood() {
-		//when(reportBuilder.build(any(Cart.class))).thenReturn(null);
-		//when(emailSender.send(anyString())).thenReturn(true);
+	public void sendReportTestGood() {		
+		reportSender.send(cart);
 		
-		try {
-			reportSender.send(cart);
-		} catch (RuntimeException ex) {
-			fail();
-		}
+		verify(reportBuilder).build(any(Cart.class));
+		verify(emailSender).send(anyString());
 	}
 	
 	

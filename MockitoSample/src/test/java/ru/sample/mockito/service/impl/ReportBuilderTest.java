@@ -17,7 +17,9 @@ import org.mockito.runners.MockitoJUnitRunner;
 import ru.sample.mockito.domain.Cart;
 import ru.sample.mockito.domain.CartItem;
 import ru.sample.mockito.domain.Product;
-
+/*
+ * Инжектирование моков
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class ReportBuilderTest {
 	

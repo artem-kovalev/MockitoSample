@@ -6,6 +6,9 @@ import org.junit.Test;
 
 public class CartItemTest {
 
+	/*
+	 * Создание стаба
+	 */
 	@Test
 	public void calculatePriceTest() {
 		Product product = mock(Product.class);
@@ -18,5 +21,17 @@ public class CartItemTest {
 		
 		assertEquals(expected, actual, 0.00001F);	
 	}
+
+	/*
+	 * Кидаем исключение
+	 */
+	@Test(expected = RuntimeException.class)
+	public void throwExceptionTest() {
+		CartItem cartItem = mock(CartItem.class);
+		when(cartItem.getProduct()).thenThrow(new RuntimeException());
+		cartItem.getProduct();
+	}
+	
+	
 
 }

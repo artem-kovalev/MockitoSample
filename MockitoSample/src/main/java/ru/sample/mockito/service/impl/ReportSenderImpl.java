@@ -19,7 +19,8 @@ public class ReportSenderImpl implements ReportSender {
 	
 	@Override
 	public void send(Cart cart) {
-		
+		final String message = reportBuilder.build(cart);
+		emailSender.send(message);
 	}
 
 }
